@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox</title>
+    <style>
+        /* 정렬할 아이템의 부모에다 display:flex를 한다 (flex-container)
+            그럼 그 자식들은 flex-item이 되어 flex 속성을 갖게됨.*/
+        .father {
+            /* flex로 설정하면 이미 방향은 row로 결정 flex-direction: row */
+            display: flex;
+            /* direction이 설정된 방향을 정렬하는 쪽이 main axis(row =>  가로정렬) 
+            direction이 바뀌면 main-axis와 cross-axis가 바뀜 */
+            flex-direction: column;
+            /* main axis 정렬*/
+            justify-content: space-around; 
+            /* cross axis 정렬 */
+            align-items: flex-end;
+            /* viewport 100% 지금 화면의 100% */
+            height: 100vh;
+        }
+
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            border: 1px solid white;
+            /* display: inline-block; */
+        }
+
+
+
+        /*  flexbox가 나오기 전에는 inline-block을 이용해서 div들을 떨어뜨려놓음
+            자식요소에 margin값을 줌으로써.
+            그런데, 폰이 나오면서 이 스타일을 쓸 수 없게됨.
+            그래서 flexbox나옴.
+            브라우저에게 얘네들을 최대한 떨어뜨려놔줘~~ => flexbox로는 한줄로 가능.
+         */
+        /* .box:first-child {
+            margin-right: 19%;
+        }
+
+        .box:last-child {
+            margin-left: 19%;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
