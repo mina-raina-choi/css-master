@@ -28,10 +28,12 @@
             display: flex;
             /* flex-item들 사이에 더이상 공간이 없을 때, 어떻게 item들을 보여줄것인가를 결정*/
             flex-wrap: wrap;
-            justify-content: flex-start;
-            flex-direction: row-reverse;
+            justify-content: center;
+            /* justify-content: flex-start;
+            flex-direction: row-reverse; */
             /* row-reverse를 하면 flex-start는 오른쪽, flex-end가 왼쪽 */
             height: 100vh;
+            flex-direction: column;
         }
 
 
@@ -48,6 +50,11 @@
             /* display: inline-block; */
         }
 
+        /* flex-container가 아니라 flex-item에 주는 속성 중 하나 align-self */
+
+        .box:first-child {
+            align-self: flex-end;
+        }
 
 
         /*  flexbox가 나오기 전에는 inline-block을 이용해서 div들을 떨어뜨려놓음
