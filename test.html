@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <style>
+        .photo {
+            display: grid;
+            grid-auto-rows: 100px;
+            grid-gap: 5px;
+            grid-template-areas: "pic pic pic content" "pic pic pic content" "pic pic pic content";
+        }
+
+        .pic {
+            grid-area: pic;
+            background-color: #27ae60;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="photo">
+        <div class="pic"></div>
+        <div class="content">
+            <div class="comment"></div>
+        </div>
+    </div>
+</body>
+
+</html>
