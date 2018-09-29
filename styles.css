@@ -1,0 +1,69 @@
+/* functional pseudo selector */
+/* li:matches(:nth-child(even), .target) {
+    background-color: blue
+} */
+
+/* li:not(.target) {
+    background-color: blue
+} */
+
+
+
+/* :root {
+    --awesomeColor: #ffcb05;
+}
+
+li:first-child a {
+    color: var(--awesomeColor);
+}
+
+@custom-selector :--headers h1, h2, h3, h4, h5, h6;
+
+:--headers {
+    color: #4ecdc4
+} */
+
+
+
+/* @custom-media --ipad-size (450px <= width <  850px);
+
+@media(--ipad-size) {
+    body {
+        background-color: red;
+    }
+} */
+
+
+/* h1 {
+    color: gray(60);
+    color: color-mod(black alpha(50%));
+
+    font-family: system-ui;
+}
+
+h1:hover {
+    color: color-mod(#2ecc71 lightness(50));
+} */
+
+
+/* 더 자세한 selector가 우위를 가진다 */
+main {
+    background-color: blue;
+
+    & section {
+        background-color: red;
+        width: 500px;
+
+        & li {
+            background-color: yellow;
+            width: 400px;
+
+            & a {
+                color: black;
+                &:hover {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}

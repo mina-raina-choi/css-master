@@ -1,0 +1,31 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "description": "CSS Masterclass",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minami-choi/css-master.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minami-choi/css-master/issues"
+  },
+  "homepage": "https://github.com/minami-choi/css-master#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.10.1",
+    "postcss-preset-env": "^6.0.7"
+  },
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {
+        "stage": 0
+      }
+    }
+  }
+}
