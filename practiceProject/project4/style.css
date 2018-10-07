@@ -165,7 +165,7 @@ p {
 .recommended .grid {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(4, 140px);
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
     overflow: auto;
     padding-bottom: 25px;
     margin-left: 5px;
