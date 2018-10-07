@@ -1,0 +1,199 @@
+:root {
+    --subColor: #777777;
+    --borderRadius: 10px;
+}
+
+
+body {
+    font-family: 'K2D', sans-serif;
+    background-color: #fafafc;
+    padding: 0 12px;
+}
+
+* {
+    /* box-sizing을 지정하면 해당 엘리먼트의 패딩과 테두리가 더는 너비를 늘리지 않음 */
+    box-sizing: border-box;
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+.header {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .header_title {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.header .header_icons {
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    width: 70px;
+}
+
+.header .header_icons .header_icon {
+    width: 18px;
+}
+
+.header .header_icon svg {
+    fill: var(--subColor);
+}
+
+.header .sub {
+    color: var(--subColor);
+    font-size: 16px;
+}
+
+
+/* main */
+
+
+.recipe {
+    background-image: url(https://i.pinimg.com/564x/ae/c7/e2/aec7e2860fa4b5438826abd82830825d.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center center;
+    height: 320px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe_heart {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 50%;
+    align-self: flex-end;
+    margin: 10px;
+}
+
+.recipe_heart svg {
+    width: 18px;
+    fill: red
+}
+
+.recipe_info {
+    background-color: white;
+    border-radius: 15px;
+    width: 90%;
+    height: 110px;
+    padding: 10px 25px;
+    box-shadow: 0 7px 20px rgba(50, 50, 93, 0.1), 0 3px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    top: 50px;
+}
+
+.recipe_meta {
+    border-bottom: 1px #dddddd solid;
+    color: #dddddd;
+    font-size: 12px;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.recipe_meta .recipe_meta_data {
+    margin-right: 5px;
+}
+
+.recipe_social {
+    font-size: 12px;
+    color: var(--subColor);
+    margin-left: 8px;
+}
+
+.recipe_social .recipe_social-item {
+    fill: #777777;
+    padding-right: 5px;
+    margin-right: 10px;
+}
+
+.recipe_social .recipe_social-item svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+.recipe_info .recipe_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+
+/* recommended */
+.recommended {
+    margin-top: 80px;
+
+}
+.recommended_titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+}
+
+.recommended_titles .recommended_title {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.recommended_titles .recommended_sub {
+    font-size: 14px;
+    color: var(--subColor);
+}
+
+.recommended .grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 140px);
+    overflow: auto;
+    padding-bottom: 25px;
+    margin-left: 5px;
+}
+
+.recommended .grid .grid-item {
+    background-image: url(https://i.pinimg.com/564x/c0/63/f1/c063f17d68bc5181dfa0010bf2a18e78.jpg);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+      /* box-shadow: X오프셋 Y오프셋 블러반경 퍼짐반경 색상; */
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-recipe_info {
+    background-color: #fafafc;
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
+}
+
+.recommended .grid .grid-item .grid-item_title {
+    font-size: 12px;
+}
+.recommended .grid .grid-item .grid-item_sub {
+    color: var(--subColor);
+    font-size: 10px;
+}
