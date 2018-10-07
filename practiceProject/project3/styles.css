@@ -1,0 +1,95 @@
+:root {
+    --subColor: #777777;
+    --borderRadius: 10px;
+}
+
+
+body {
+    font-family: 'K2D', sans-serif;
+    background-color: #fafafc;
+    padding: 0 16px;
+}
+
+* {
+    /* box-sizing을 지정하면 해당 엘리먼트의 패딩과 테두리가 더는 너비를 늘리지 않음 */
+    box-sizing: border-box;
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+.header {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 16px;
+    color: var(--subColor);
+}
+
+.full {
+    background-image: 
+    linear-gradient( rgba(0,0,0,.2), rgba(0,0,0,.2) ),
+    url(https://i.pinimg.com/564x/b8/c0/7a/b8c07a5a63f15415d036ea209abee11d.jpg);
+    background-size: cover;
+    background-position: center center;  
+    border-radius: var(--borderRadius);
+    height: 120px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    justify-content: space-between;
+}
+
+.full_title {
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.full_sub {
+    color: white;
+    font-size: 14px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+}
+
+.grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.grid-item {
+    margin-bottom: 8px; 
+}
+
+.grid .grid-item_title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.grid .grid-item_sub {
+    color: var(--subColor);
+    font-size: 14px;
+}
