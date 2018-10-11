@@ -1,0 +1,188 @@
+:root {
+    --mainColor: #aa6fff;
+    --subColor: #77b9f6;
+    --greyColor: #cacaca;
+    --greyBackColor: #d4d4d2;
+    --whiteColor: #ffffff;
+    --boxShadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    --gradientBg: linear-gradient(to right, var(--mainColor), var(--subColor));
+}
+
+
+/* default style */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fafafc;
+    margin: 0;
+    /* padding: 0 16px; */
+}
+
+* {
+    /* box-sizing을 지정하면 해당 엘리먼트의 패딩과 테두리가 더는 너비를 늘리지 않음 */
+    box-sizing: border-box;
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    font-size: 100%;
+    font-family: inherit;
+    border: 0;
+    padding: 0;
+}
+
+
+
+/* header */
+.header {
+    height: 85px;
+    background-color: var(--mainColor);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    padding-left: 36px;
+    padding-right: 16px;
+    background-image: var(--gradientBg);
+    z-index: 2;
+    /* z-index는 position 속성이 설정된 엘리먼트에 대해서만 의미를 갖는다.    */ 
+    position: relative; 
+}
+
+.header .header_title{
+    font-size: 14px;
+    color: var(--whiteColor);
+    text-indent: -16px;
+    letter-spacing: 6px;
+}
+
+.header .header_icons {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.header .header_icon {
+   color: var(--whiteColor);
+   height: 25px;
+} 
+
+
+/* fakeBg */
+.fakeBg {
+    position: fixed;
+    height: 100vh;
+    background-color: white;
+    top: 0px;
+    right: 0;
+    left: 0;
+    width: 68vw;
+    margin: auto;
+    z-index: 1;
+  }
+
+/* main */
+.main {
+    background-color: var(--greyBackColor);
+    padding: 40px 40px 0 40px; 
+    height: 100vh;
+    position: relative;
+}
+
+.main .main-header {
+    position: relative;
+    z-index: 2;
+}
+
+.main .main-header .main-header_title {
+    font-size: 36px;
+    letter-spacing: 12px;
+    font-weight: bolder;
+    padding-bottom: 18px;
+}
+
+.main .main-header .main-header-sub {
+    display: flex;
+    justify-content: space-between;
+    color: var(--greyColor);
+    padding-bottom: 18px;
+    padding-right: 36px;
+    margin: 0 0 0 16px;
+    border-bottom: 1px solid;
+}
+
+.main .main-header .main-header-sub .main-header-sub_title {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-indent: 14px;
+}
+
+.match-list .match-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 5px 0;
+    grid-gap: 5px;
+
+    position: relative;
+    z-index: 3;
+}
+
+.match-list .match-item .match-item_info .match-item_title {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.match-list .match-item .match-item_info .match-item_sub {
+    font-size: 10px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    color: var(--greyColor);
+}
+
+
+.match-list .match-item .match-item_icon {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--greyColor);
+    padding-right: 36px;
+}
+
+.match-list .match-item:nth-child(even) .match-item_icon {
+    color: var(--mainColor);
+}
+
+.match-list .match-item img {
+    width: 40px;
+    box-shadow: var(--boxShadow);
+}
+
+.match-list_button {
+    background-image: var(--gradientBg);
+    color: var(--whiteColor);
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    padding: 20px;
+    width: 200px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 4;
+}
