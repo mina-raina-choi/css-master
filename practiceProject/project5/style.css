@@ -100,7 +100,7 @@ button {
 .main {
     background-color: var(--greyBackColor);
     padding: 40px 40px 0 40px; 
-    height: 100vh;
+    height: 100%;
     position: relative;
 }
 
