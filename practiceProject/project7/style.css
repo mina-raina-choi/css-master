@@ -1,0 +1,312 @@
+:root {
+    --backColor: #f7ffff;
+    --descFontSize: 12px;
+    --descColor: #cfcfcf;
+    --greyColor: #dddddd;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background-color: var(--backColor);
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* header */
+
+.header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px;
+}
+
+.header .header_hamburger {
+    transform: rotate(90deg);
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header .header_title {
+    font-size: 24px;
+}
+
+.header .header_title .header_icon {
+    margin-right: 5px;
+}
+
+.header .header_title span {
+    font-weight: bold
+}
+
+/* gallery */
+
+.gallery {
+    background-color: #edf0f7;
+    padding: 40px 20px;
+}
+
+.gallery-wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-flow: column;
+    max-width: 80%;
+    margin: 0 auto;
+    height: 200px;
+}
+
+.gallery .gallery-wrapper .gallery-item:first-child {
+    background-image: url(https://i.pinimg.com/564x/92/a8/7b/92a87b097372f3a121518366567a0e0a.jpg);
+}
+
+.gallery .gallery-wrapper .gallery-item:nth-child(2) {
+    background-image: url(https://i.pinimg.com/564x/3d/96/2b/3d962ba16436a10eb1a01db5e2138f40.jpg);
+}
+
+.gallery .gallery-wrapper .gallery-item:last-child {
+    background-image: url(https://i.pinimg.com/564x/87/58/5e/87585edb1e8784f052e89d8767627900.jpg);
+}
+
+/* content */
+
+.content {
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 80%;
+    margin: 50px auto;
+    grid-gap: 10px;
+}
+
+.content1 .content1_title {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.content1 .content1_desc {
+    font-size: var(--descFontSize);
+    color: var(--descColor);
+    margin-bottom: 40px;
+}
+
+.content1 .content1-info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+}
+
+.content2 .content2-item .item_title {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.content2 .content2-item .item_desc {}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* header */
+
+.header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px;
+}
+
+.header .header_hamburger {
+    transform: rotate(90deg);
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header .header_title {
+    font-size: 24px;
+}
+
+.header .header_title .header_icon {
+    margin-right: 5px;
+}
+
+.header .header_title span {
+    font-weight: bold
+}
+
+/* gallery */
+
+.gallery {
+    background-color: #edf0f7;
+    padding: 40px 20px;
+}
+
+.gallery-wrapper {
+    display: grid;
+    grid-gap: 30px;
+    grid-auto-flow: column;
+    max-width: 80%;
+    margin: 0 auto;
+    height: 25vh;
+}
+
+.gallery .gallery-wrapper .gallery-item {
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery .gallery-wrapper .gallery-item:first-child {
+    background-image: url(https://i.pinimg.com/564x/92/a8/7b/92a87b097372f3a121518366567a0e0a.jpg);
+}
+
+.gallery .gallery-wrapper .gallery-item:nth-child(2) {
+    background-image: url(https://i.pinimg.com/564x/3d/96/2b/3d962ba16436a10eb1a01db5e2138f40.jpg);
+}
+
+.gallery .gallery-wrapper .gallery-item:last-child {
+    background-image: url(https://i.pinimg.com/564x/87/58/5e/87585edb1e8784f052e89d8767627900.jpg);
+}
+
+/* content */
+
+.content {
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 80%;
+    margin: 50px auto;
+    grid-gap: 50px;
+}
+
+.content1 .content1_title {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.content1 .content1_desc {
+    font-size: var(--descFontSize);
+    color: var(--descColor);
+}
+
+.content1 .content1-info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, minmax(min-content, 50px));
+    margin-bottom: 30px;
+}
+
+.content1 .content1-info .content1-info-item {
+    line-height: 1rem;
+}
+
+.content1 .content1-info .content1-info_title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.content1 .content1-info .content1-info_desc {
+    color: #666;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.content1 .back_btn {
+    border: none;
+    background-color: #fff;
+    text-transform: uppercase;
+    border-bottom: 1px solid blue;
+    font-weight: 700; 
+}
+
+.content2 .content2-item .item_title {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.content2 .content2-item .item_desc {
+    font-size: var(--descFontSize);
+    color: var(--descColor);
+    margin-bottom: 40px;
+}
