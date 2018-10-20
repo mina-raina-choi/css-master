@@ -1,0 +1,200 @@
+:root {
+    --redfilter: #4e0608;
+    --titleColor: #fe0d1b;
+    --borderStyle: 8px solid var(--titleColor);
+    --dashedGreyColor: #888888;
+    --whiteColor: #ffffff;
+    --blackBorderStyle: 8px solid #000000;
+
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background-color: var(--backColor);
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 50px 20px;
+}
+
+
+.main {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(8, minmax(100px, 1fr)); 
+    grid-template-rows: repeat(3, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: column ;
+}
+
+.header {
+    grid-row: span 3;
+    grid-column: span 2;
+    border-top: var(--borderStyle);
+    display: flex;
+    flex-direction: column;
+}
+
+.header .title {
+    color: var(--titleColor);
+    font-size: 120px;
+    font-weight: bold;
+    transform: rotate(-90deg);
+    position: relative;
+    flex: 1;
+    left: 10px;
+    top: 50px;
+}
+
+.header .header-back {
+    height: 50%;    
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--whiteColor),
+        var(--whiteColor) 10px,
+        var(--dashedGreyColor) 10px,
+        var(--dashedGreyColor) 12px
+      );
+    flex: 1;
+}
+
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item:nth-child(3) {
+    grid-row: span 2;
+}
+
+.item:nth-child(3) .item-img {
+    flex: 1;
+    background-image: linear-gradient(to bottom, #ff00005e, #ff00005e), 
+    url(https://images.pexels.com/photos/1409990/pexels-photo-1409990.jpeg?cs=srgb&dl=asphalt-automobile-car-1409990.jpg&fm=jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.item:nth-child(4) {
+    grid-row: span 3;
+    grid-column: span 2;
+}
+
+
+.item:nth-child(4) .item-img {
+    flex: 1;
+    background-image: linear-gradient(to bottom, #ff00005e, #ff00005e),
+    url(https://images.pexels.com/photos/1409990/pexels-photo-1409990.jpeg?cs=srgb&dl=asphalt-automobile-car-1409990.jpg&fm=jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.item:nth-child(5) {
+    grid-row: span 2;
+}
+
+.item:nth-child(5) .item-img{
+    flex: 1;
+    background-image: linear-gradient(to bottom, #ff00005e, #ff00005e),
+    url(https://images.pexels.com/photos/1409990/pexels-photo-1409990.jpeg?cs=srgb&dl=asphalt-automobile-car-1409990.jpg&fm=jpg)
+    ;
+    background-position: center;
+    background-size: cover;
+}
+
+.item:nth-child(9) {
+    grid-column: span 2
+}
+
+.item:nth-child(9) .item-wrap, .item:nth-child(4) .item-wrap {
+    flex-direction: row
+}
+
+
+.item:nth-child(9) .item-num, .item:nth-child(4) .item-num{
+    font-size: 80px;
+    flex: 1
+}
+
+.item:nth-child(9) .item-wrap-info, .item:nth-child(4) .item-wrap-info{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: end;
+}
+
+.item-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    border-top: var(--blackBorderStyle);
+    padding: 5px 0;
+    flex: 1
+}
+
+
+.item .item-num {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.item .item-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item .item-desc-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.item .item-desc-sub {
+    font-size: 12px;
+    color: #555555;
+}
+
