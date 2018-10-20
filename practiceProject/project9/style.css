@@ -1,0 +1,187 @@
+:root {
+    --iconGrey: #888888;
+    --backColor: #fbebea;
+    --navColor: #444444;
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background-color: var(--backColor);
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+html, body {
+    height: 100%
+}
+
+
+/* header */
+.header {
+    height: 80px;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.header .header-logo {
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.header .header-nav {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    color: var(--navColor);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header .header-nav li {
+    text-align: center;
+}
+
+.header .header-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 40px;
+    font-weight: bold;
+    color: var(--icongrey);
+}
+
+.header .header-info span {
+    margin-right: 25px;
+    color: var(--navColor)
+}
+
+.header .header-info span svg{
+    fill: var(--navColor);
+    height: 20px;
+}
+
+
+
+/* main */
+
+.main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main .main-photo {
+    background-image: url('./icons/main-photo.jpg');
+    background-position: center right;
+    background-size: cover;
+}
+
+.main .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main .main-content .main-content-info {
+    margin-left: 80px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+}
+
+.main-content-info .main-title {
+    font-size: 80px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.main-content-info .main-title .main-dot {
+    display: block;
+    left: 230px;
+    position: relative;
+    top: 15px;
+    color: var(--navcolor);
+}
+
+.main-content-info .main-pages {
+    font-weight: bold;
+    font-size: 50px
+}
+
+.main-content-info .main-pages .main-dot {
+    display: block;
+    color: var(--navcolor);
+    position: relative;
+    left: 10px;
+    top: 5px;
+    font-size: 60px;
+}
+
+.main-content-info .main-pages .total-page{
+    color: var(--iconGrey);
+    font-size: 25px
+}
+
+.main .main-content .main-content-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #ffffff;
+    padding: 0 25px;
+}
+
+.main-content-footer .main-content-nav {
+    font-size: 50px;
+    margin-left: 20px;
+    color: #888;
+}
+
+.main-content-socials .social-icons {
+    height: 25px;
+    margin-right: 10px;
+}
